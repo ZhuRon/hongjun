@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Header :HeaderMes="HeaderMes"></Header>
+      <!-- <Header :HeaderMes="HeaderMes"></Header> -->
     </div>
 </template>
 <script>

@@ -25,6 +25,7 @@ export default {
 <style lang="stylus" scoped>
 a {
 text-decoration: none;
+color #464646
 }
 .router-link-active {
     color #ff4442

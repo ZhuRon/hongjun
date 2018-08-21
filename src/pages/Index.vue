@@ -1,8 +1,8 @@
 <template>
     <div class="page">
           <!-- <Header :HeaderMes="HeaderMes"></Header> -->
-         <router-view></router-view>
          <tab></tab>
+         <router-view></router-view>
          <!-- <tab-bar @tab="tab"></tab-bar> -->
     </div>
 </template>
