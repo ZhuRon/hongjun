@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     #search{
         display:flex;
         width: 11.614358974358rem;

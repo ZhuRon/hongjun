@@ -26,7 +26,6 @@ export default {
     margin 0
     padding 0
   #app
-    color red
     margin 0
     padding 0
 </style>
