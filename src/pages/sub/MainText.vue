@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow:hidden">
     <Header :HeaderMes="HeaderMes"></Header>
     <div class="space"></div>
     <div class="main">
@@ -14,18 +14,26 @@
       </div>
     <article v-html="newsDetail.content"></article>
     </div>
+    <div class="footer">
+      <div class="bd">
+        <input type="footer_bd_text" placeholder="说出你的看法">
+      </div>
+      <subIcon :count="count"></subicon>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/header'
+import subIcon from '@/components/subIcon'
 export default {
   components: {
-    Header
+    Header,
+    subIcon
   },
   data () {
     return {
-      id: 123,
+      count: { emotion: 963, comment: 696, star: 98 },
       force: 0,
       HeaderMes: {
         title: '正文',
@@ -34,9 +42,9 @@ export default {
       newsDetail: {}
     }
   },
-  created: function () {
-    console.log(this.$route.params.id)
-  },
+  // created: function () {
+  //   console.log(this.$route.params.id)
+  // },
   mounted: function () {
     this.getNewsDetail()
   },
@@ -75,6 +83,7 @@ export default {
   width: 9.107rem;
   margin-left: 0.52rem;
   padding-top: 0.6666667rem;
+  margin-bottom: 2.4rem;
 }
 .title{
   font-size: 0.44rem;
@@ -119,5 +128,35 @@ export default {
   border-radius:0.12rem;
   margin-right: 0.186rem;
 }
-
+article{
+  font-size: 0.49rem;
+  line-height: 0.8233333333333333333rem;
+}
+.footer{
+  width:10rem;
+  background-color: #ffffff;
+  height: 1.28rem;
+  position :fixed;
+  display: flex;
+  flex-direction :flex-start;
+  justify-content: space-around;
+  align-items :center;
+  bottom: 0;
+  left:0;
+  border-top:0.02rem solid #9b9b9b;
+}
+.bd{
+  height: 1rem;
+  padding-top: 0.25rem;
+}
+input{
+  background-color: #dbdbdb;
+  height:0.65333333333333rem;
+  width:5.133333333333333rem;
+  border-radius:0.15rem;
+  font-size:15px;
+  padding-left:0.3rem;
+  outline:none;
+  border-width: 0;
+}
 </style>
