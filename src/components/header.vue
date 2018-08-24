@@ -1,6 +1,9 @@
 <template>
     <x-header style="background-color:#ffffff;title-color:black">
+      <div style="display:flex;flex-direction:column; align-items:center;justify-content:center;">
         <span v-if="HeaderMes.title" style="color: #000000;font-size: 22px;">{{HeaderMes.title}}</span>
+        <span v-if="HeaderMes.subtitle" style="color: #000000;font-size: 22px;">{{HeaderMes.subtitle}}</span>
+      </div>
         <div v-if="HeaderMes.avatar" class="avatar">
             <div class="avatar_border">
                 <!-- <img src="@/assets/images/test/jiangjiang.jpg" alt=""> -->
