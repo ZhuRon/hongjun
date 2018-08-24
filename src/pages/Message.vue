@@ -5,7 +5,7 @@
       <div style="padding-bottom:0.2933333rem;">
         <div class="items_head">
           <div class="item_head">
-              <div class="item_head_photo"><img src="" ></div>
+              <div class="item_head_photo"><img :src="img" ></div>
               <div class="item_head_text">
                 <div class="item_head_name">{{item.source}}</div>
                 <li>{{item.time}}</li>
@@ -42,7 +42,8 @@ export default {
   name: 'MC',
   data () {
     return {
-      newsList: []
+      newsList: [],
+      img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3641064786,3874798264&fm=27&gp=0.jpg'
     }
   },
   mounted: function () {

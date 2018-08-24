@@ -5,7 +5,7 @@
       <div>
           <div class="items_head">
             <div class="item_head">
-                <div class="item_head_photo"><img src="" ></div>
+                <div class="item_head_photo"><img :src="item.img" ></div>
                 <div class="item_head_text">
                   <div class="item_head_name">{{item.name}}</div>
                   <div class="item_times">
@@ -29,6 +29,7 @@ export default {
   data () {
     return {
       mains: [{
+        img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3641064786,3874798264&fm=27&gp=0.jpg',
         name: '张文',
         day: '8-3',
         time: '10:05',
@@ -38,6 +39,7 @@ export default {
         subText: '来自于 雪球--小罐茶三年成为茶行业第一到底是如何做到的?'
       },
       {
+        img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3641064786,3874798264&fm=27&gp=0.jpg',
         name: '卡夫卡的',
         day: '8-3',
         time: '9:53',

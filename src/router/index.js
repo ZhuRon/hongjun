@@ -7,6 +7,7 @@ import Message from '@/pages/Message'
 import Explain from '@/pages/Explain'
 import HotEvaluate from '@/pages/HotEvaluate'
 import MainText from '@/pages/sub/MainText'
+import IndividualShar from '@/pages/sub/IndividualShar'
 // const login = () => import('@/pages/login')
 // 因为登入界面不常用所以用lazyload
 
@@ -45,6 +46,11 @@ export default new Router({
       path: '/MT/:id',
       name: 'MainText',
       component: MainText
+    },
+    {
+      path: '/IS',
+      name: 'IndividualShar',
+      component: IndividualShar
     }
   ]
 })

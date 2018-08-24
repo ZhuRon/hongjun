@@ -6,7 +6,7 @@
       <span class="title">{{newsDetail.title}}</span>
       <p class="time">{{newsDetail.day}} {{newsDetail.time}} {{newsDetail.week}}</p>
       <div class="author">
-        <div class="profile"><img src=""></div>
+        <div class="profile"><img :src="img"></div>
         <p class="name">{{newsDetail.source}}</p>
         <div class="buttonArea">
           <div class="button" @click="forceIt()">{{force==0?"+关注":"取关"}}</div>
@@ -33,6 +33,7 @@ export default {
   },
   data () {
     return {
+      img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3641064786,3874798264&fm=27&gp=0.jpg',
       count: { emotion: 963, comment: 696, star: 98 },
       force: 0,
       HeaderMes: {
@@ -105,6 +106,7 @@ export default {
   height: 1.37333333333333rem;
   border-radius: 50%;
   background-color: red;
+  overflow: hidden;
 }
 .name{
   margin-left: 0.1rem;
@@ -158,5 +160,10 @@ input{
   padding-left:0.3rem;
   outline:none;
   border-width: 0;
+}
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
