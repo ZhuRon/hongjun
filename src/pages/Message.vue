@@ -54,8 +54,8 @@ export default {
       const axios = require('axios')
       axios.get('http://61.135.195.37:8000/api/get_newsfeed')
         .then(response => {
-          console.log(response.data)
-          console.log(response.data.list)
+          // console.log(response.data)
+          // console.log(response.data.list)
           // var res = JSON.parse(response.data)
           this.newsList = response.data.list
         })
