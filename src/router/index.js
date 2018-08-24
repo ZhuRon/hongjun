@@ -6,6 +6,7 @@ import HotList from '@/pages/HotList'
 import Message from '@/pages/Message'
 import Explain from '@/pages/Explain'
 import HotEvaluate from '@/pages/HotEvaluate'
+import MainText from '@/pages/sub/MainText'
 // const login = () => import('@/pages/login')
 // 因为登入界面不常用所以用lazyload
 
@@ -39,11 +40,11 @@ export default new Router({
           component: HotEvaluate
         }
       ]
+    },
+    {
+      path: '/MT/:id',
+      name: 'MainText',
+      component: MainText
     }
-    // {
-    //   path: '/',
-    //   name: 'Home',
-    //   component: Home
-    // }
   ]
 })

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport"content="initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5,user-scalable=no,minimal-ui"/>
+  <title>Document</title>
+  <style type="text/css">
+    html{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    input{
+        left: 0.48rem;
+        width: 8.02666667rem;
+        height: 0.7733333rem;
+        background-color: #e0e0e0;
+        border-radius: 12px;
+        position: relative;
+        border: 0px ; 
+        outline:none;
+
+    }
+    .header{
+        position:relative;
+    }
+    .assets_1{
+        width:1rem ;
+        height: 0.7733333rem;
+        position: absolute;
+    }
+    .search_text{
+        font-size: 0.35rem;
+        font-weight:bold;
+    }
+    #Image1 
+    {
+        position:absolute;
+        width: 0.52rem;
+        height: 0.52rem;
+        z-index:10;
+        left: 0.733333333rem;
+        top: 0.7rem;
+     }
+     #Image2{
+        position:absolute;
+        top: 0.5rem;
+        left:8.666666666rem;
+     }
+     .itemTabbar{
+         padding-top: 0.3rem;
+         display: flex;
+         justify-content:space-around;
+     }
+     .item{
+         font-size: 0.5rem;
+         font-weight: 100;
+     }
+     .item-active{
+         color: #ff4442;
+         font-size: 0.5rem;
+         font-weight: bold;
+         height: 0.8rem;
+        border-width: 0 0 10px 0;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #ff4442;
+     }
+     .space{
+         height: 0.18rem;
+         width: 20rem;
+         background-color: #eaeaea;
+         margin-top: 0.106666rem;
+         margin-left: -1rem;
+     }
+     .items_head{
+         display: flex;
+     }
+    .item_head{
+        height: 1.7333333rem;
+        margin-top: 0.41333333rem;
+        display: flex;
+
+    }
+    .item_head_photo{
+        height: 1.66rem;
+        width: 1.66rem;
+        border-radius: 50%;
+        background-color: red;
+        overflow:hidden;
+        margin-left: 0.533333rem;
+    }
+    .item_head_photo img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        
+    }
+    .item_head_text{
+        display: flex;
+        flex-direction:column;
+        margin-left: 0.2rem;
+        margin-top: 0.2rem;
+    }
+    .item_times{
+        display: flex;
+        justify-content:space-between;
+        
+    }
+    .item_head_name{
+        color: #ff4442;
+        font-size: 0.45rem;
+        margin-bottom: 0.1rem;
+    }
+    .item_head_day{
+        margin-right: 0.16rem;
+    }
+    .item_head_day,.item_head_time{
+        color: #8d8d8d;
+        font-size: 0.35rem;
+    }
+    .top{
+        font-size: 0.3rem;
+        margin-left: 2.6rem;
+        margin-top: 0.64rem;
+    }
+    .text p{
+        font-size: 0.4rem;
+        text-align:justify;
+        margin-top: -0.0001rem;
+    }
+    .text{
+        width: 8.39333333333rem;
+        margin-left: 0.663333rem;
+    }
+    .text_end{
+        color: #4d8bff;
+        font-size: 0.3rem;
+        display: flex;
+        width:4.493333333rem ;
+        justify-content: flex-start;
+        margin-left: 5.0133333rem;
+        height: 0.266777777rem;
+    }
+
+.nav .information .chunk .text,{
+    width: 7.39333333333rem;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+.hr{
+    margin-top: 0.89rem;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+<div class="header">
+         <img src="assets_1.png" ID="Image1">
+        <input type="text" name="search" placeholder="         点击搜索资讯" class="search_text">
+        <img src="assets_2.png" ID="Image2">
+      </div>
+      <div class="itemTabbar"><div class="item">资讯</div><div class="item">智读</div><div class="item-active">热评</div><div class="item">热榜</div></div>
+      <!-- 也可以用伪元素来做被点击时候的红线 -->
+      <div class="space"></div>
+      <!-- // 用var for key in 可以循环数组渲染页面，不过时间有点晚，还要挖坑{}埋数据，就偷懒直接复制html了 -->
+      <div class="items">
+          <div class="items_head">
+          <div class="item_head">
+              <div class="item_head_photo"><img src="./assets_3.jpg" ></div>
+              <div class="item_head_text">
+              <div class="item_head_name">张文</div>
+              <div class="item_times">
+                  <div class="item_head_day">8-3</div>
+                  <div class="item_head_time">10:05</div>
+                </div>
+          </div>
+      </div>
+      <div class="head_evaluate"><div class="top"><img src="./assets_4.png" alt="">366 <img src="./assets_5.png" alt="">444
+      </div></div>
+    </div>
+    </div>
+    <div class="text"><p >中国企业历来就重营销，轻产品，但是产品是根本。苹果是在自己产品极为优秀的情况下，然后再来注重营销。换个角度想想，如果苹果店逼格那么高，买的</p>
+</div>
+ <div class="text_end">来自于 雪球--小罐茶三年成为茶行业第一到底是如何做到的</div>
+ <HR width="90%" color=#eaeaea SIZE=1 class="hr"/>
+</div>
+</div>
+<div class="items">
+        <div class="items_head">
+        <div class="item_head">
+            <div class="item_head_photo"><img src="./assets_3.jpg" ></div>
+            <div class="item_head_text">
+            <div class="item_head_name">张文</div>
+            <div class="item_times">
+                <div class="item_head_day">8-3</div>
+                <div class="item_head_time">10:05</div>
+              </div>
+        </div>
+    </div>
+    <div class="head_evaluate"><div class="top"><img src="./assets_4.png" alt="">366 <img src="./assets_5.png" alt="">444
+    </div></div>
+  </div>
+  </div>
+  <div class="text"><p >中国企业历来就重营销，轻产品，但是产品是根本。苹果是在自己产品极为优秀的情况下，然后再来注重营销。换个角度想想，如果苹果店逼格那么高，买的</p>
+</div>
+<div class="text_end">来自于 雪球--小罐茶三年成为茶行业第一到底是如何做到的</div>
+<HR width="90%" color=#eaeaea SIZE=1 class="hr"/>
+</div>
+</div>
+<div class="items">
+        <div class="items_head">
+        <div class="item_head">
+            <div class="item_head_photo"><img src="./assets_3.jpg" ></div>
+            <div class="item_head_text">
+            <div class="item_head_name">张文</div>
+            <div class="item_times">
+                <div class="item_head_day">8-3</div>
+                <div class="item_head_time">10:05</div>
+              </div>
+        </div>
+    </div>
+    <div class="head_evaluate"><div class="top"><img src="./assets_4.png" alt="">366 <img src="./assets_5.png" alt="">444
+    </div></div>
+  </div>
+  </div>
+  <div class="text"><p >中国企业历来就重营销，轻产品，但是产品是根本。苹果是在自己产品极为优秀的情况下，然后再来注重营销。换个角度想想，如果苹果店逼格那么高，买的</p>
+</div>
+<div class="text_end">来自于 雪球--小罐茶三年成为茶行业第一到底是如何做到的</div>
+<HR width="90%" color=#eaeaea SIZE=1 class="hr"/>
+</div>
+</div>
+<div class="items">
+        <div class="items_head">
+        <div class="item_head">
+            <div class="item_head_photo"><img src="./assets_3.jpg" ></div>
+            <div class="item_head_text">
+            <div class="item_head_name">张文</div>
+            <div class="item_times">
+                <div class="item_head_day">8-3</div>
+                <div class="item_head_time">10:05</div>
+              </div>
+        </div>
+    </div>
+    <div class="head_evaluate"><div class="top"><img src="./assets_4.png" alt="">366 <img src="./assets_5.png" alt="">444
+    </div></div>
+  </div>
+  </div>
+  <div class="text"><p >中国企业历来就重营销，轻产品，但是产品是根本。苹果是在自己产品极为优秀的情况下，然后再来注重营销。换个角度想想，如果苹果店逼格那么高，买的</p>
+</div>
+<div class="text_end">来自于 雪球--小罐茶三年成为茶行业第一到底是如何做到的</div>
+<HR width="90%" color=#eaeaea SIZE=1 class="hr"/>
+</div>
+</div>
+<script>
+    var width = document.documentElement.clientWidth
+    var rem = width/10
+    document.documentElement.style.fontSize = rem + 'px'  // 识别rem
+</script>
+</body>
+</html>

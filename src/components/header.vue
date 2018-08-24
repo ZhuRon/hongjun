@@ -1,6 +1,6 @@
 <template>
-    <x-header>
-        <span v-if="HeaderMes.title">{{HeaderMes.title}}</span>
+    <x-header style="background-color:#ffffff;title-color:black">
+        <span v-if="HeaderMes.title" style="color: #000000;font-size: 22px;">{{HeaderMes.title}}</span>
         <div v-if="HeaderMes.avatar" class="avatar">
             <div class="avatar_border">
                 <!-- <img src="@/assets/images/test/jiangjiang.jpg" alt=""> -->
@@ -30,7 +30,7 @@
         <!-- <x-img slot="overwrite-left" :src="ic_appbar_msg" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-img> -->
         <div slot="overwrite-left">
             <!-- <img v-if="HeaderMes.type== 0 || !HeaderMes.type" src="@/assets/images/navbar/ic_appbar_search_large.png" alt="mess" style="width:50%;height:50%;"> -->
-            <!-- <img v-if="HeaderMes.type== 1" src="@/assets/images/link/ic_appbar_back.png" alt="mess" style="width:40%;height:40%;" @click="routerBack()"> -->
+            <img v-if="HeaderMes.type== 1" src="../common/image/routerback.png" alt="mess" style="width:15%;height:20%;" @click="routerBack()">
         </div>
         <div slot="right">
             <!-- <img src="@/assets/images/navbar/ic_appbar_msg.png" alt="mess" style="width:50%;height:50%;float:right;"> -->
