@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '../pages/index.vue'
+import index from '../pages/Index.vue'
 // import Home from '@/pages/Home'
 import HotList from '@/pages/HotList'
 import Message from '@/pages/Message'

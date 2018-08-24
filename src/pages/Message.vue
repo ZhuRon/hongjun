@@ -1,27 +1,27 @@
 <template>
 <div>
         <div class="space"></div>
-   <div v-for="item in mains" :key="item.id">
+   <div v-for="item in newsList" :key="item.id">
       <div style="padding-bottom:0.2933333rem;">
         <div class="items_head">
           <div class="item_head">
               <div class="item_head_photo"><img src="" ></div>
               <div class="item_head_text">
-                <div class="item_head_name">{{item.name}}</div>
-                <li>{{item.day}} {{item.time}}</li>
+                <div class="item_head_name">{{item.source}}</div>
+                <li>{{item.time}}</li>
             </div>
           </div>
           <img src="../common/image/letter.png" id="letter">
     </div>
     <div style="overflow:hidden;">
-      <router-link :to="{name:'MainText',params: {id:item.name}}">
-        <span class="main_title">{{item.text}}</span>
+      <router-link :to="{name:'MainText',params: {id:item.url}}">
+        <span class="main_title">【{{ item.title }}】{{item.summary}}</span>
       </router-link>
     </div>
-    <tag :source="item.source"></tag>
+    <tag :source="item.tags"></tag>
     <div class="deadline">
-    <p>{{item.times}}次阅读</p>
-    <subIcon :count="item.count"></subIcon>
+    <p>{{item.readnum}}次阅读</p>
+    <subIcon :count="item.userfeed"></subIcon>
     </div>
     </div>
     <HR width="90%" color=#eaeaea SIZE=1 class="hr"/>
@@ -42,39 +42,23 @@ export default {
   name: 'MC',
   data () {
     return {
-      mains: [{
-        name: '上海证券交易所',
-        day: '8-3',
-        time: '12.15',
-        text: '【比亚迪--季度净利  同比下降83% 在香港大跌5%】 财联社4月30日讯，香港恒生指数涨幅扩大至1%，比亚迪股份（01211.HK）在香港跌逾4%，公司此前预计2018年1-6月归属上市公司股东的净利润3.00亿至5.00亿，同比变动-82.59%至-70.98%，汽车整车行业平均净利润增长率为-5.25%。',
-        times: '2036',
-        source: [{ 'name': '比亚迪' }, { 'name': '新能源汽车' }, { 'name': '贸易战' }],
-        count: { emotion: 93, comment: 165, star: 63 }},
-      {
-        name: '券商中国',
-        day: '8-3',
-        time: '11.43',
-        text: '【万科A：中兴通讯深圳湾超级总部基地项目未受影响】 财联社4月29日讯，万科A在投资者互动平台回应“受委托开发的中兴通讯深圳湾超级总部基地项目是否受到中兴事件影响”时表示，相关项目目前来看未受影响。',
-        times: '1800',
-        source: [{ 'name': '中兴通讯' }, { 'name': '万科地产' }, { 'name': '半导体' }],
-        count: { emotion: 186, comment: 653, star: 63 }},
-      {
-        name: '上海证券交易所',
-        day: '8-3',
-        time: '12.15',
-        text: '【比亚迪--季度净利  同比下降83% 在香港大跌5%】 财联社4月30日讯，香港恒生指数涨幅扩大至1%，比亚迪股份（01211.HK）在香港跌逾4%，公司此前预计2018年1-6月归属上市公司股东的净利润3.00亿至5.00亿，同比变动-82.59%至-70.98%，汽车整车行业平均净利润增长率为-5.25%。',
-        times: '2036',
-        source: [{ 'name': '比亚迪' }, { 'name': '新能源汽车' }, { 'name': '贸易战' }],
-        count: { emotion: 93, comment: 165, star: 63 }},
-      {
-        name: '券商中国',
-        day: '8-3',
-        time: '11.43',
-        text: '【万科A：中兴通讯深圳湾超级总部基地项目未受影响】 财联社4月29日讯，万科A在投资者互动平台回应“受委托开发的中兴通讯深圳湾超级总部基地项目是否受到中兴事件影响”时表示，相关项目目前来看未受影响。',
-        times: '1800',
-        source: [{ 'name': '中兴通讯' }, { 'name': '万科地产' }, { 'name': '半导体' }],
-        count: { emotion: 186, comment: 653, star: 63 }}
-      ]
+      newsList: []
+    }
+  },
+  mounted: function () {
+    this.getNewsList()
+  },
+  methods: {
+    getNewsList () {
+      // const https = require('https')
+      const axios = require('axios')
+      axios.get('http://61.135.195.37:8000/api/get_newsfeed')
+        .then(response => {
+          console.log(response.data)
+          console.log(response.data.list)
+          // var res = JSON.parse(response.data)
+          this.newsList = response.data.list
+        })
     }
   }
 }
