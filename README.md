@@ -17,5 +17,5 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-8.20完成router的搭建以及tab组件的引用 
+8.27 给予保密性考虑，转移项目至bitbucket
  

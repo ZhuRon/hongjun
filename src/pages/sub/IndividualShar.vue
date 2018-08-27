@@ -8,8 +8,8 @@
             <span>{{nowData}}</span><p>{{increaseData}}&nbsp;&nbsp;{{increase}}</p>
           </div>
           <div class="index_p">
-            <p>高 {{higher}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开 {{begin}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量 {{amount}}</p>
-            <p>低 {{lower}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;换 {{changer}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额 {{total}}</p>
+            <p><span>高 <span style="color:#fd4243">{{higher}}</span></span><span>开 <span style="color:#fd4243">{{begin}}</span></span><span>量 {{amount}}</span> </p>
+            <p><span>低 <span style="color:#00b251">{{lower}}</span></span><span>换 {{changer}}</span><span>额 {{total}}</span> </p>
           </div>
         </div>
         <div class="wordCloud">词云</div>
@@ -100,5 +100,7 @@ export default {
   width:6.9rem;
   padding-top: 0.3rem;
   padding-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-around;
 }
 </style>
