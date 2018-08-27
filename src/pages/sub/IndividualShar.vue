@@ -7,6 +7,10 @@
           <div class="data">
             <span>{{nowData}}</span><p>{{increaseData}}&nbsp;&nbsp;{{increase}}</p>
           </div>
+          <div class="index_p">
+            <p>高 {{higher}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开 {{begin}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量 {{amount}}</p>
+            <p>低 {{lower}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;换 {{changer}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额 {{total}}</p>
+          </div>
         </div>
         <div class="wordCloud">词云</div>
         <div class="hot">热度</div>
@@ -31,7 +35,13 @@ export default {
       },
       nowData: '9.61',
       increase: '0.84%',
-      increaseData: '0.08'
+      increaseData: '0.08',
+      higher: '9.68',
+      begin: '9.53',
+      amount: '12123',
+      lower: '9.46',
+      changer: '2.50%',
+      total: '1171.6'
     }
   }
 }
@@ -50,6 +60,8 @@ export default {
 .index{
   height: 1.93333333333rem;
   margin-top: 0.18666666666667rem;
+  display: flex;
+  justify-content: space-between;
 }
 .wordCloud{
   height: 6.253333333333rem;
@@ -77,10 +89,16 @@ export default {
 }
 .data span,.data p{
   color:#fd4341;
-  font-weight: bolder;
+  font-size: 14px;
+  font-weight: 600;
 }
 .data span{
   text-align:center;
   font-size: 0.8rem;
+}
+.index_p p{
+  width:6.9rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
 }
 </style>
